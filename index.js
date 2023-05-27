@@ -2,7 +2,7 @@ searchBtn = document.querySelector("#search-btn");
 let searchBar = document.querySelector(".search-bar-container");
 let formBtn = document.querySelector("#login-btn");
 let loginForm = document.querySelector(".login-form-container");
-let formClose = document.querySelector("#form-close");
+
 let menu = document.querySelector("#menu-bar");
 let navbar = document.querySelector(".navbar");
 let videoBtn = document.querySelectorAll(".vid-btn");
@@ -27,7 +27,7 @@ const modalLeavingDate = document.getElementById("modal-leavingDate");
   // console.log("is this runing");
   loginForm.classList.add("active");
 })();
-const modalUsername = document.getElementById("username");
+const modalUsername = document.getElementById("username").value;
 const modalUserPassword = document.getElementById("password");
 
 window.onscroll = () => {
@@ -51,9 +51,9 @@ formBtn.addEventListener("click", () => {
   loginForm.classList.add("active");
 });
 
-formClose.addEventListener("click", () => {
-  loginForm.classList.remove("active");
-});
+// formClose.addEventListener("click", () => {
+//   loginForm.classList.remove("active");
+// });
 /*popup button start-for login successful-*/
 let popup = document.getElementById("popup");
 
@@ -155,20 +155,33 @@ bookNowForm.addEventListener("submit", (e) => {
 });
 
 /// login popup
+// loginForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+
+//   loggedInUser = document.getElementById("username").value;
+//   // console.log(loggedInUser);
+//   let data = document.getElementById("user");
+//   data.innerHTML = loggedInUser;
+//   console.log(data);
+//   const password = modalUserPassword.value;
+
+//   loginForm.classList.remove("active");
+// });
+
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  let username = modalUsername.value;
-  username = username.substring(0, username.indexOf("@"));
+  const loggedInUser = document.getElementById("username").value;
+  const userName = loggedInUser.split("@")[0];
+  const modalUserPassword = document.getElementById("password").value;
 
-  loggedInUser = modalUsername.value;
-  const password = modalUserPassword.value;
+  let data = document.getElementById("user");
+  data.innerHTML = userName;
+
+  console.log(data);
 
   loginForm.classList.remove("active");
-
-  modalDays.textContent = "";
-  modalArrivingDate.innerText = "";
-  modalLeavingDate.innerText = "";
 });
+
 document.querySelector("#home").classList.remove("hide");
 document.querySelector("header").classList.remove("hide");

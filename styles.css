@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
 
 :root {
-  --orange: #fbab18;
+  --orange: #ab402f;
 }
 
 * {
@@ -717,4 +717,9 @@ h2 {
 
 .hide{
   opacity: 0;
+}
+#user{
+  color: var(--orange);
+  margin-left: 35px;
+  font-family: system-ui;
 }
