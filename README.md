@@ -1,6 +1,6 @@
 # Make My Trip Clone - _Full Stack MERN App_
 
--   App Demo Link : **_[MakeMyTrip Clone](https://makemytrip-vivek.netlify.app/)_**
+-   App Demo Link : **_[MakeMyTrip Clone](https://make-my-trip-rohit.vercel.app/)_**
 
 ## Features
 
