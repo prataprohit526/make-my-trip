@@ -1,0 +1,263 @@
+.search-content-container{
+    background-image:  linear-gradient(#051423, #15457b);
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding: 20px;
+    border-radius: 10px;
+}
+.main{
+    margin-top:70px;
+}
+
+
+.search-content{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 3.5rem 2rem 2rem 2rem;
+    background-color: white;
+    /* background-color: pink; */
+    border-radius: 1rem;
+    box-shadow: 0 1px 7px 0 rgba(0,0,0,.2);
+    font-family: Calibri;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: max-content;
+}
+.search-content-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: max-content;
+    width: 100%;
+    /* position: relative; */
+}
+.trip-type, .room-type{
+    width: 100%;
+    height: 2rem;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+}
+.trip-type div, .room-type div{
+    margin-right: 2rem;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.checked{
+    background-color: #eaf5ff;
+    font-weight: 900;
+}
+.trip-type label, .trip-type input, .room-type label, .room-type input{
+    cursor: pointer;
+}
+.trip-details, .room-details{
+    /* width: 71rem; */
+    /* height: 7rem; */
+    width: 100%;
+    height: max-content;
+    margin-top: 1rem;
+    gap: 10px;
+    /* background-color: blue; */
+    border: solid 1px #e7e7e7;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+
+.trip-details-input, .room-details-input{
+    box-sizing: border-box;
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+    border-right: solid 1px #e7e7e7;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    /* transition: 500ms; */
+}
+.trip-details-input:hover, .room-details-input:hover{
+    background-color: #eaf5ff;
+}
+
+.trip-details-input:first-child, .room-details-input:first-child{
+    border-radius: 10px 0px 0px 10px;
+}
+.trip-details-input:last-child, .room-details-input:last-child{
+    border-radius: 0px 10px 10px 0px;
+    border: none;
+}
+.trip-details-input label, .room-details-input label{
+    /* padding-left: 1.5rem;
+    padding-top: 0.5rem; */
+    cursor: pointer;
+    /* transition: 500ms; */
+}
+.trip-details-input input, .room-details-input input{
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    /* padding: 0 1rem; */
+    font-size: xx-large;
+    font-weight: bold;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.trip-details-input input:hover, .room-details-input input:hover{
+    background-color: #eaf5ff;
+}
+.trip-details-input:first-child input, .room-details-input:first-child input{
+    border-radius: 0px 0px 0px 10px;
+}
+.trip-details-input:last-child input, .room-details-input:last-child input{
+    border-radius: 0px 0px 10px 0px;
+}
+
+.departure-display, .return-display, .check-in-display, .check-out-display{
+    box-sizing:border-box;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color:inherit;
+    font-size: larger;
+    position: relative;
+} 
+
+.departure-display p, .return-display p, .check-in-display p, .check-out-display p{
+    box-sizing: border-box;
+    margin: 0;
+    padding-left:1rem;
+    padding-top: 0.8rem;
+/*     width: 50%; */
+    height: 5.1rem;
+    background-color: inherit;
+    position: relative;
+    z-index: 1;
+} 
+
+.departure-display input, .return-display input, .check-in-display input, .check-out-display input{
+    position: absolute;
+    color: rgba(255, 255, 255, 0);
+    background-color: inherit;
+    /* width: 17.71rem; */
+    height: 5.1rem;
+    top: 0;
+    left: 0;
+}
+.departure-display span, .return-display span, .check-in-display span, .check-out-display span{
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+#search-btn{
+    width: 13.5rem;
+    height: 2.8rem;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 2rem;
+    color: white;
+    background: linear-gradient(93deg,#53b2fe,#065af3);
+    box-shadow: 0 1px 7px 0 rgba(0,0,0,.2);
+    text-transform: uppercase;
+    font-family: Calibri;
+    font-size: 30px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -10%;
+    cursor: pointer;
+    /* transition: 500ms; */
+}
+#search-btn:hover{
+    transform: scale(1.05);
+}
+#search-btn:active{
+    transform: scale(1);
+}
+.flights{
+    width: 90%;
+}
+
+@media  screen and (max-width:1060px) {
+    #main{
+    height: 100%;
+
+    }
+    .search-content-container{
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+    .search-content{
+        flex-wrap: wrap;
+    }
+    .search-content-container{
+        height: 680px;
+        padding: 20px;
+    }
+    .trip-details{
+        grid-template-columns: 1fr;
+    }
+    .trip-details-input, .room-details-input{
+        margin: 0 auto;
+        border: none;
+        border-right: none !important;
+    }
+    .main{
+        margin-top: 60px;
+    }
+    .departure-display, .return-display, .check-in-display, .check-out-display {
+        box-sizing: border-box;
+        margin: 0;
+        background-color: inherit;
+        font-size: larger;
+        transition: 500ms;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+    }
+    .departure-display p, .return-display p, .check-in-display p, .check-out-display p {
+        box-sizing: border-box;
+        margin: 0;
+        padding-left: 1rem;
+        padding-top: 0.8rem;
+        height: 5.1rem;
+        background-color: inherit;
+        position: relative;
+        z-index: 1;
+        transition: 500ms;
+        flex: 1 1 125px;
+        position: absolute;
+    }
+    .departure-display input, .return-display input, .check-in-display input, .check-out-display input {
+        color: rgba(255, 255, 255, 0);
+        background-color: inherit;
+        top: 0;
+        left: 0;
+        margin-left: auto;
+        flex: 0 0 100px;
+    }
+    .trip-details-input, .room-details-input{
+        margin: 0 auto;
+        width: 100%;
+    }
+    #search-btn{
+        bottom : -4%;
+    }
+}
