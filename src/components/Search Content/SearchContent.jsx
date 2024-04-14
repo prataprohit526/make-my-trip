@@ -22,7 +22,7 @@ const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 const today = getDate(new Date());
 
 const SearchContent = ({ type, hotels, tickets }) => {
-  console.log(hotels);
+  // console.log(hotels);
   if (type === "flights") {
     const [checked, setChecked] = useState("one");
     const [showComponentB, setShowComponentB] = useState(false);

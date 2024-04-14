@@ -21,7 +21,7 @@ const Footer = () => {
         </div>
         <div className="copyright">
           <h3>
-            © 2023 <Link to={"/"}>MAKEMYTRIP CLONE</Link>
+            © 2024 <Link to={"/"}>MAKEMYTRIP CLONE</Link>
           </h3>{" "}
           by Rohit
           <br />
